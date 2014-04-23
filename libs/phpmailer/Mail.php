@@ -29,16 +29,16 @@ class Mail extends PHPMailer{
         //Tenemos que usar gmail autenticados, así que esto a TRUE
         $this->SMTPAuth   = true;
         //Definimos la cuenta que vamos a usar. Dirección completa de la misma
-        $this->Username   = "cluis.ryusoul@gmail.com";
+        $this->Username   = "";
         //Introducimos nuestra contraseña de gmail
-        $this->Password   = "3l1z4b3t1986";
+        $this->Password   = "";
         //Definimos el remitente (dirección y, opcionalmente, nombre)
-        $this->From= 'cluis.ryusoul@gmail.com';
-        $this->FromName='CESAR LUIS ROSAGEL';
+        $this->From= '';
+        $this->FromName='';
         //Esta línea es por si queréis enviar copia a alguien (dirección y, opcionalmente, nombre)
         //$mail->AddReplyTo('replyto@correoquesea.com','El de la réplica');
         //Y, ahora sí, definimos el destinatario (dirección y, opcionalmente, nombre)
-        $this->AddAddress('chicharo_el_sexy@hotmail.com', 'El Destinatario');
+        $this->AddAddress('', 'El Destinatario');
         //Definimos el tema del email
         $this->Subject = 'Esto es un correo de prueba';
         //Para enviar un correo formateado en HTML lo cargamos con la siguiente función. Si no, puedes meterle directamente una cadena de texto.
