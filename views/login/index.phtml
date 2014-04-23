@@ -1,0 +1,25 @@
+
+    <section style="padding-top: 110px;">
+        <div class="onecolumn" style="margin: 0 auto;">
+            <div class="headerForm">
+                <h3 class="titleForm">Iniciar Sesion</h3>
+            </div>
+            <div class="contentForm">
+                <form name="form1" method="post" action="" style="margin-left: 150px;">
+                    <input type="hidden" value="1" name="enviar">
+                    <label style="display: inherit; margin-bottom: 30px;">
+                        <p class="etiqueta">Usuario:</p>
+                        <input class="inputBox" type="text" name="user" id="user" required="required">
+                    </label>
+                    <label>
+                        <p class="etiqueta">Contraseña:</p>
+                        <input class="inputBox" type="password" name="password" id="password" required="required">
+                    </label>
+                    <br>
+                    <input type="submit" value="Enviar" onclick="formhash(this.form, this.form.password);"/>
+                </form>
+                <img src="<?php echo $_layoutParams['ruta_img'];?>fw_logo.jpg" style="float: right;position: absolute;z-index: 1; margin: -186px 0 0 659px;">
+            </div>
+
+        </div>
+    </section>

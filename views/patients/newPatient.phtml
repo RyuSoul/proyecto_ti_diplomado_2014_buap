@@ -1,0 +1,143 @@
+
+<section style=" padding-left: 200px; padding-top: 110px;">
+    <div class="onecolumn">
+        <div class="headerForm">
+            <h3 class="titleForm">Agregar Paciente</h3>
+        </div>
+        <div class="contentForm">
+            <form id="newPatient" method="post" action="<?php echo BASE_URL; ?>patients/savePatient" enctype="multipart/form-data">
+                <div>
+                    <img src="<?php echo $_layoutParams['ruta_img'];?>pacient_male.png" class="imageForm">
+                    <h1>Información General</h1>
+                    <input class="inputBox" type="text" name="lastName" placeholder="Apellido Paterno" required>
+                    <input class="inputBox" type="text" placeholder="Apellido Materno">
+                    <input class="inputBox" type="text" placeholder="Nombres">
+
+                    <div class="divider"></div>
+
+                    <label style="margin-right: 202px;">Sexo:</label>
+                    <label>Fecha:</label>
+
+                    <div class="dividerLabel"></div>
+
+                    <select>
+                        <option>Femenino</option>
+                        <option>Masculino</option>
+                    </select>
+                    <input class="inputBox" type="date">
+                    <input class="inputBox" type="text" placeholder="CURP">
+
+                    <div class="divider"></div>
+
+                    <input class="inputBox" type="text" placeholder="RFC">
+                </div>
+                <div>
+                    <h1>Información Personal</h1>
+                    <label style="margin-right: 148px;">Estado civil:</label>
+                    <label style="margin-right: 172px;">Estudios</label>
+                    <label style="margin-right: 100px;">Grupo sanguineo</label>
+                    <label>Nivel SE:</label>
+                    <div class="dividerLabel"></div>
+                    <select>
+                        <option>Soltero(a)</option>
+                        <option>Casado(a)</option>
+                        <option>Viudo(a)</option>
+                        <option>Divorciado(a)</option>
+                        <option>Union Libre</option>
+                    </select>
+                    <select>
+                        <option>Sin estudios</option>
+                        <option>Sabe leer y escribir</option>
+                        <option>Primaria</option>
+                        <option>Secundaria</option>
+                        <option>Carrera Tecnica</option>
+                        <option>Preparatoria</option>
+                        <option>Licenciatura trunca</option>
+                        <option>Licenciatura terminada</option>
+                        <option>Maestria</option>
+                        <option>Doctorado</option>
+                    </select>
+                    <select>
+                        <option>--</option>
+                        <option>A-</option>
+                        <option>A+</option>
+                        <option>AB-</option>
+                        <option>AB+</option>
+                        <option>B-</option>
+                        <option>B+</option>
+                        <option>O-</option>
+                        <option>O+</option>
+                        <option>RH-</option>
+                        <option>RH+</option>
+                    </select>
+                    <select>
+                        <option>A/B</option>
+                        <option>C+</option>
+                        <option>C</option>
+                        <option>D+</option>
+                        <option>D</option>
+                        <option>E</option>
+                    </select>
+                    <div class="divider"></div>
+
+                    <input class="inputBox" type="text" placeholder="Nombre Padre">
+                    <input class="inputBox" type="text" placeholder="Nombre Madre">
+                    <input class="inputBox" type="text" placeholder="Nombre Pareja">
+                    <input class="inputBox" type="text" placeholder="Nombre Tutor">
+
+                </div>
+
+                <div>
+                    <h1>Dirección</h1>
+                    <input class="inputBox" type="text" placeholder="Calle">
+                    <input class="inputBox" type="text" placeholder="No Ext">
+                    <input class="inputBox" type="text" placeholder="No Int">
+                    <input id="zipCode" name="zipCode" class="inputBox" type="text" placeholder="CP">
+                    <div class="divider"></div>
+                    <select id="paises">
+                        <option value="">-Seleccione Pais-</option>
+                        <?php foreach($this->paises as $p):?>
+                              <option value="<?php echo $p['idPais'];?>"><?php echo $p['nombre'];?></option>
+                        <?php endforeach;?>
+                    </select>
+                    <select id="estados">
+
+                    </select>
+                    <select id="municipios">
+
+                    </select>
+                    <select id="LocalidadColonia">
+
+                    </select>
+                    <div class="divider"></div>
+
+                </div>
+
+                <div>
+                    <h1>Información de Contacto</h1>
+                    <label style="margin-right: 108px;">Telefono de Casa</label>
+                    <label style="margin-right: 108px;">Telefono Oficina</label>
+                    <label style="margin-right: 108px;">Telefono Celular</label>
+                    <label>Correo Electronico</label>
+                    <div class="dividerLabel"></div>
+                    <input class="inputBox" type='tel' pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' placeholder='Formato: +99(99)9999-9999'>
+                    <input class="inputBox" type='tel' pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' placeholder='Formato: +99(99)9999-9999'>
+                    <input class="inputBox" type='tel' pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' placeholder='Formato: +99(99)9999-9999'>
+                    <input class="inputBox" type="email">
+                    <div class="dividerLabel"></div>
+                    <p style="display: inline;">
+                        <input id="uploadFile" class="inputUploadFile" style="line-height: 16px;" type="text" disabled="disabled" placeholder="Choose File">
+                    </p>
+                    <div class="fileUpload btn btn-primary">
+                        <span>Upload</span>
+                        <input id="uploadBtn" name="file" type="file" class="upload" />
+                    </div>
+                </div>
+
+                <div>
+                    <input type="submit" value="Guardar">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
